@@ -72,7 +72,13 @@ const List = ({ type, playerRef, playerInnerRef }) => {
   ) {
     return (
       <div className="error">
-        <Error msg={"Add movies to watchlist"} />
+        <Error
+          msg={
+            type === "movie"
+              ? "Add movies to watchlist"
+              : "Add shows to watchlist"
+          }
+        />
       </div>
     );
   }
